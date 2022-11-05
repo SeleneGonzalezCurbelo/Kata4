@@ -1,5 +1,6 @@
-package kata3;
+package view;
 
+import model.Histogram;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import org.jfree.ui.ApplicationFrame;
@@ -31,9 +32,9 @@ public class HistogramDisplay extends ApplicationFrame {
     private DefaultCategoryDataset createDataSet(){
         DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
         
-        for (String key : histogram.keySet()){
+        histogram.keySet().forEach((key) -> {
             dataSet.addValue(histogram.get(key), "", key);
-        }
+        });
         return dataSet;
     }
     
