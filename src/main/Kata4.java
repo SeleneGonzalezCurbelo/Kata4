@@ -1,11 +1,13 @@
 package main;
 
-import java.util.List;
-import model.Mail;
+import java.util.Queue;
+
 import view.HistogramDisplay;
-import model.Histogram;
 import view.MailHistogramBuilder;
 import view.MailListReader;
+
+import model.Mail;
+import model.Histogram;
 
 public class Kata4 {
         
@@ -18,7 +20,7 @@ public class Kata4 {
         process(MailListReader.read(fileName));
     }
     
-    public static void process(List<Mail> mailList){
+    public static void process(Queue<Mail> mailList){
         output(MailHistogramBuilder.build(mailList));
     }
     
