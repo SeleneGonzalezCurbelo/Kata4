@@ -11,7 +11,14 @@ public class Mail {
     }
 
     public String getDomain() {
-        return email.split("@")[1];
+        if (!isEmail()) {
+            throw new IllegalArgumentException("Invalid email address: " + email);
+        }
+        String[] parts = email.split("@");
+        if (parts.length != 2) {
+            throw new IllegalArgumentException("Invalid email address: " + email);
+        }
+        return parts[1];
     }
     
     public boolean isEmail(){
