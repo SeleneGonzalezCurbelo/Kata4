@@ -20,7 +20,7 @@ public class Kata4 {
         process(MailListReader.read(fileName));
     }
     
-    public static void process(Queue<Mail> mailList){
+        public static void process(Queue<Mail> mailList){
         output(MailHistogramBuilder.build(mailList));
     }
     
