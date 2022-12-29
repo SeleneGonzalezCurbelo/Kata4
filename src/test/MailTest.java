@@ -7,7 +7,6 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 public class MailTest {
-
     @Test
     public void testIsEmail() {
         Mail mail = new Mail("user@example.com");
